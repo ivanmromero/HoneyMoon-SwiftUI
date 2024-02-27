@@ -17,6 +17,7 @@
 		D2DD169E2B8E9627000D94D2 /* HoneymoonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DD169D2B8E9627000D94D2 /* HoneymoonModel.swift */; };
 		D2DD16A12B8E9683000D94D2 /* HoneymoonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DD16A02B8E9683000D94D2 /* HoneymoonData.swift */; };
 		D2DD16A52B8E96FE000D94D2 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DD16A42B8E96FE000D94D2 /* CardView.swift */; };
+		D2DD16A72B8E9A38000D94D2 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DD16A62B8E9A38000D94D2 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		D2DD169D2B8E9627000D94D2 /* HoneymoonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoneymoonModel.swift; sourceTree = "<group>"; };
 		D2DD16A02B8E9683000D94D2 /* HoneymoonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoneymoonData.swift; sourceTree = "<group>"; };
 		D2DD16A42B8E96FE000D94D2 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		D2DD16A62B8E9A38000D94D2 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			children = (
 				D24591482B8E905A008F2E15 /* ContentView.swift */,
 				D2DD16A42B8E96FE000D94D2 /* CardView.swift */,
+				D2DD16A62B8E9A38000D94D2 /* HeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2DD16A12B8E9683000D94D2 /* HoneymoonData.swift in Sources */,
+				D2DD16A72B8E9A38000D94D2 /* HeaderView.swift in Sources */,
 				D2DD169E2B8E9627000D94D2 /* HoneymoonModel.swift in Sources */,
 				D24591492B8E905A008F2E15 /* ContentView.swift in Sources */,
 				D24591472B8E905A008F2E15 /* HoneymoonApp.swift in Sources */,
