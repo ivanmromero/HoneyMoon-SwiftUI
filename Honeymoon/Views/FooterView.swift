@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct FooterView: View {
+    // MARK: - PROPERTIES
+    
+    // MARK: - BODY
     var body: some View {
         HStack {
             Image(systemName: "xmark.circle")
@@ -38,6 +41,7 @@ struct FooterView: View {
     }
 }
 
+// MARK: - PREVIEW
 #Preview(traits: .fixedLayout(width: 375, height: 80)) {
     FooterView()
 }
