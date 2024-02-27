@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GuideView: View {
     // MARK: - PROPERTIES
+    @Environment(\.dismiss) var dismiss
     
     // MARK: - BODY
     var body: some View {
@@ -45,7 +46,7 @@ struct GuideView: View {
                 Spacer(minLength: 10)
                 
                 Button(action: {
-                    
+                    dismiss()
                 }, label: {
                     Text("Continue".uppercased())
                         .font(.headline)
