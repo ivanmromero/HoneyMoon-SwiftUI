@@ -11,11 +11,12 @@ struct ContentView: View {
     // MARK: - PROPERTIES
     @State private var showAlert: Bool = false
     @State private var showGuide: Bool = false
+    @State private var showInfo: Bool = false
     
     // MARK: - BODY
     var body: some View {
         VStack {
-            HeaderView(showGuideView: $showGuide)
+            HeaderView(showGuideView: $showGuide, showInfoView: $showInfo)
             
             Spacer()
             

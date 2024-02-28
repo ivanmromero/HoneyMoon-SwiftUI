@@ -9,6 +9,8 @@ import SwiftUI
 
 struct InfoView: View {
     // MARK: - PROPERTIES
+    @Environment(\.dismiss) private var dismiss
+    
     // MARK: - BODY
     var body: some View {
         ScrollView(.vertical) {
@@ -32,7 +34,7 @@ struct InfoView: View {
                 Spacer(minLength: 10)
                 
                 Button(action: {
-                   
+                    dismiss()
                 }, label: {
                     Text("Continue".uppercased())
                         .modifier(ButtonModifier())
@@ -44,8 +46,6 @@ struct InfoView: View {
             .padding(.horizontal, 25)
         }
         .scrollIndicators(.hidden)
-        
-        
     }
 }
 
