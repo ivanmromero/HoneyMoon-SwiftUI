@@ -16,7 +16,6 @@ struct ContentView: View {
     private var dragAreaThreshold: CGFloat = 65.0
     @State private var lastCardIndex: Int = 1
     @State private var cardRemovalTransition = AnyTransition.trailingBottom
-    @State private var cardRemovalAnimationActivate: Bool = false
     
     // MARK: - CARD VIEWS
     @State var cardViews: [CardView] = {
@@ -141,21 +140,18 @@ struct ContentView: View {
                                     default:
                                         break
                                     }
-                                    cardRemovalAnimationActivate.toggle()
                                 })
                                 .onEnded({ value in
                                     guard case .second(true, let drag?) = value else { return }
                                     
                                     if drag.translation.width < -dragAreaThreshold || drag.translation.width > dragAreaThreshold {
+                                        playSound(sound: "sound-rise", type: "mp3")
                                         moveCards()
                                     }
                                 })
                         )
                     // TODO: Transition dont work in iOS 16.x/17
                         .transition(cardRemovalTransition)
-                        .onAppear(perform: {
-                            cardRemovalAnimationActivate.toggle()
-                        })
                 }
             }
             .padding()
