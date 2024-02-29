@@ -26,6 +26,7 @@
 		D2DD16B42B8EADE0000D94D2 /* TitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DD16B32B8EADE0000D94D2 /* TitleModifier.swift */; };
 		D2DD16B72B8EAEF5000D94D2 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DD16B62B8EAEF5000D94D2 /* ButtonModifier.swift */; };
 		D2DD16B92B8FEACD000D94D2 /* SymbolModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DD16B82B8FEACD000D94D2 /* SymbolModifier.swift */; };
+		D2DD16BC2B8FF098000D94D2 /* CardTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DD16BB2B8FF098000D94D2 /* CardTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		D2DD16B32B8EADE0000D94D2 /* TitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleModifier.swift; sourceTree = "<group>"; };
 		D2DD16B62B8EAEF5000D94D2 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
 		D2DD16B82B8FEACD000D94D2 /* SymbolModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolModifier.swift; sourceTree = "<group>"; };
+		D2DD16BB2B8FF098000D94D2 /* CardTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		D24591452B8E905A008F2E15 /* Honeymoon */ = {
 			isa = PBXGroup;
 			children = (
+				D2DD16BA2B8FF076000D94D2 /* Extension */,
 				D2DD16AA2B8E9DFF000D94D2 /* Components */,
 				D24591582B8E91A3008F2E15 /* Sounds */,
 				D24591462B8E905A008F2E15 /* HoneymoonApp.swift */,
@@ -160,6 +163,14 @@
 			path = Modifiers;
 			sourceTree = "<group>";
 		};
+		D2DD16BA2B8FF076000D94D2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D2DD16BB2B8FF098000D94D2 /* CardTransition.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -237,6 +248,7 @@
 				D2DD16B22B8EAD01000D94D2 /* InfoView.swift in Sources */,
 				D2DD16A92B8E9C80000D94D2 /* FooterView.swift in Sources */,
 				D2DD16B42B8EADE0000D94D2 /* TitleModifier.swift in Sources */,
+				D2DD16BC2B8FF098000D94D2 /* CardTransition.swift in Sources */,
 				D2DD16B92B8FEACD000D94D2 /* SymbolModifier.swift in Sources */,
 				D2DD16A72B8E9A38000D94D2 /* HeaderView.swift in Sources */,
 				D2DD169E2B8E9627000D94D2 /* HoneymoonModel.swift in Sources */,

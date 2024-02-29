@@ -15,6 +15,8 @@ struct ContentView: View {
     @GestureState private var dragState = DragState.inactive
     private var dragAreaThreshold: CGFloat = 65.0
     @State private var lastCardIndex: Int = 1
+    @State private var cardRemovalTransition = AnyTransition.trailingBottom
+    @State private var cardRemovalAnimationActivate: Bool = false
     
     // MARK: - CARD VIEWS
     @State var cardViews: [CardView] = {
@@ -114,7 +116,7 @@ struct ContentView: View {
                                 y: isTopCard(cardView: cardView) ? dragState.translation.height : 0)
                         .scaleEffect(isTopCard(cardView: cardView) && dragState.isDragging ? 0.85 : 1.0)
                         .rotationEffect(Angle(degrees: isTopCard(cardView: cardView) ? Double(dragState.translation.width / 12) : 0))
-                        .animation(.interpolatingSpring(stiffness: 120, damping: 120), value: UUID())
+                        .animation(.interpolatingSpring(stiffness: 120, damping: 120), value: dragState.isDragging)
                         .gesture(
                             LongPressGesture(minimumDuration: 0.01)
                                 .sequenced(before: DragGesture())
@@ -128,6 +130,19 @@ struct ContentView: View {
                                         break
                                     }
                                 })
+                                .onChanged({ value in
+                                    guard case .second(true, let drag?) = value else { return }
+                                    
+                                    switch drag.translation.width {
+                                    case _ where drag.translation.width < -dragAreaThreshold:
+                                        cardRemovalTransition = .leadingBottom
+                                    case _ where drag.translation.width > dragAreaThreshold:
+                                        cardRemovalTransition = .trailingBottom
+                                    default:
+                                        break
+                                    }
+                                    cardRemovalAnimationActivate.toggle()
+                                })
                                 .onEnded({ value in
                                     guard case .second(true, let drag?) = value else { return }
                                     
@@ -136,6 +151,11 @@ struct ContentView: View {
                                     }
                                 })
                         )
+                    // TODO: Transition dont work in iOS 16.x/17
+                        .transition(cardRemovalTransition)
+                        .onAppear(perform: {
+                            cardRemovalAnimationActivate.toggle()
+                        })
                 }
             }
             .padding()
